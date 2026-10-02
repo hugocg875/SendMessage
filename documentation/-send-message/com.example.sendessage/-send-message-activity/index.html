@@ -107,13 +107,14 @@
   <div class="breadcrumbs"><a href="../../../index.html">SendMessage</a><span class="delimiter">/</span><a href="../index.html">com.example.sendessage</a><span class="delimiter">/</span><span class="current">SendMessageActivity</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Send</span><wbr></wbr><span>Message</span><wbr></wbr><span><span>Activity</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">SendMessageActivity</a> : <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/app/AppCompatActivity.html">AppCompatActivity</a></div><p class="paragraph">Esta es la primera actividad de la app desarrollada en clase de como pasar de una ventana a ptra llevando datos escritos por el usuario:</p><ol>
-     <li>Crear componente EditText y Button en XML</li>
-     <li>Lanzar un evento en un componente visual</li>
-     <li>Crea el intent junto con el Bundle para pasar a otra actividad</li>
-     <li>El ciclo de vida de la Activity</li>
-     <li>Ver la pila de Actividades</li>
-</ol><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">Hugo de Cristobal Gomez</p></span><h4 class="tableheader">See also</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":app/release" data-filterable-set=":app/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="https://developer.android.com/reference/kotlin/android/widget/TextView.html"><span>Text</span><wbr></wbr><span><span>View</span></span></a></div></span></div><div></div></div></div><div class="table-row table-row_content" data-filterable-current=":app/release" data-filterable-set=":app/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="https://developer.android.com/reference/kotlin/android/widget/Button.html"><span><span>Button</span></span></a></div></span></div><div></div></div></div><div class="table-row table-row_content" data-filterable-current=":app/release" data-filterable-set=":app/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="https://developer.android.com/reference/kotlin/android/os/Bundle.html"><span><span>Bundle</span></span></a></div></span></div><div></div></div></div><div class="table-row table-row_content" data-filterable-current=":app/release" data-filterable-set=":app/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="https://developer.android.com/reference/kotlin/android/content/Intent.html"><span><span>Intent</span></span></a></div></span></div><div></div></div></div></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/release"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">SendMessageActivity</a> : <a href="https://developer.android.com/reference/kotlin/androidx/appcompat/app/AppCompatActivity.html">AppCompatActivity</a></div><p class="paragraph">Pantalla principal desde la que el usuario redacta y envía un mensaje.</p><p>Esta actividad muestra el flujo básico para navegar entre pantallas y
+transferir datos introducidos por el usuario:</p><ol>
+     <li>Obtiene las referencias al campo de texto y al botón definidos en XML.</li>
+     <li>Escucha la pulsación del botón de envío.</li>
+     <li>Crea un <code>Message</code> con el contenido escrito.</li>
+     <li>Incluye el mensaje serializado en un <code>Bundle</code>.</li>
+     <li>Abre <code>RecieveMessageActivity</code> para mostrarlo.</li>
+</ol><span class="kdoc-tag"><h4 class="">Author</h4><p class="paragraph">Hugo de Cristobal Gomez</p></span><h4 class="tableheader">See also</h4><div class="table"><div class="table-row table-row_content" data-filterable-current=":app/release" data-filterable-set=":app/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../../com.example.sendessage.model/-message/index.html"><span><span>Message</span></span></a></div></span></div><div></div></div></div><div class="table-row table-row_content" data-filterable-current=":app/release" data-filterable-set=":app/release"><div class="main-subrow keyValue "><div class=""><span class="inline-flex"><div><a href="../-recieve-message-activity/index.html"><span>Recieve</span><wbr></wbr><span>Message</span><wbr></wbr><span><span>Activity</span></span></a></div></span></div><div></div></div></div></div></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
@@ -149,7 +150,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/release"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/release"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a></div><div class="brief "><p class="paragraph">Constantes utilizadas por la actividad.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -303,7 +304,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/release"><div class="symbol monospace"><span class="token keyword">lateinit </span><span class="token keyword">var </span><a href="boton.html">boton</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/widget/Button.html">Button</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/release"><div class="symbol monospace"><span class="token keyword">lateinit </span><span class="token keyword">var </span><a href="boton.html">boton</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/widget/Button.html">Button</a></div><div class="brief "><p class="paragraph">Botón que inicia el envío del mensaje.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -1158,7 +1159,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/release"><div class="symbol monospace"><span class="token keyword">lateinit </span><span class="token keyword">var </span><a href="mensaje.html">mensaje</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/widget/EditText.html">EditText</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app/release"><div class="symbol monospace"><span class="token keyword">lateinit </span><span class="token keyword">var </span><a href="mensaje.html">mensaje</a><span class="token operator">: </span><a href="https://developer.android.com/reference/kotlin/android/widget/EditText.html">EditText</a></div><div class="brief "><p class="paragraph">Campo en el que el usuario escribe el contenido que desea enviar.</p></div></div></div>
                 </div>
               </div>
             </div>

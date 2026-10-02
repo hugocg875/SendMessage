@@ -13,27 +13,36 @@ import com.example.sendessage.model.Person
 import org.w3c.dom.Text
 
 /**
- * Esta es la primera actividad de la app desarrollada en clase de como pasar
- * de una ventana a ptra llevando datos escritos por el usuario:
+ * Pantalla principal desde la que el usuario redacta y envía un mensaje.
+ *
+ * <p>Esta actividad muestra el flujo básico para navegar entre pantallas y
+ * transferir datos introducidos por el usuario:</p>
+ *
  * <ol>
- *     <li>Crear componente EditText y Button en XML</li>
- *     <li>Lanzar un evento en un componente visual</li>
- *     <li>Crea el intent junto con el Bundle para pasar a otra actividad</li>
- *     <li>El ciclo de vida de la Activity</li>
- *     <li>Ver la pila de Actividades</li>
+ *     <li>Obtiene las referencias al campo de texto y al botón definidos en XML.</li>
+ *     <li>Escucha la pulsación del botón de envío.</li>
+ *     <li>Crea un <code>Message</code> con el contenido escrito.</li>
+ *     <li>Incluye el objeto mensaje serializado en un <code>Bundle</code>.</li>
+ *     <li>Abre <code>RecieveMessageActivity</code> para mostrarlo.</li>
  * </ol>
  *
  * @author Hugo de Cristobal Gomez
  * @version 1.0
- * @see android.widget.TextView
- * @see android.widget.Button
- * @see android.os.Bundle
- * @see Intent
+ * @see Message
+ * @see RecieveMessageActivity
  */
 class SendMessageActivity : AppCompatActivity() {
+
+    /** Campo en el que el usuario escribe el contenido que desea enviar. */
     lateinit var mensaje: EditText
+
+    /** Botón que inicia el envío del mensaje. */
     lateinit var boton: Button
-    companion object{
+
+    /** Constantes utilizadas por la actividad. */
+    companion object {
+
+        /** Etiqueta empleada para identificar en Logcat los eventos del ciclo de vida. */
         const val TAG: String = "LogSendMessageActivity"
     }
 
@@ -53,10 +62,13 @@ class SendMessageActivity : AppCompatActivity() {
     }
 
     /**
-     * Funcion que construye un mensaje con reminente, la persona que envia y el mensaje
-     * de manera que despues se pueda recuperar y mostrar por pantalla
+     * Construye y envía el mensaje escrito a la pantalla de recepción.
+     *
+     * <p>El objeto <code>Message</code>, junto con sus datos de remitente y destinatario, se
+     * serializa bajo la clave <code>KEY_MESSAGE</code>. La actividad receptora usa
+     * esa misma clave para recuperarlo.</p>
      */
-    private fun sendMessage(){
+    private fun sendMessage() {
         val intent = Intent(this, RecieveMessageActivity::class.java)
         val bundle = Bundle()
         val sender = Person("18293048", "Maria", "Cortes Martin")

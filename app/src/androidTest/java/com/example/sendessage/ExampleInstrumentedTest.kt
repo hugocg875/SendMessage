@@ -9,12 +9,17 @@ import org.junit.runner.RunWith
 import org.junit.Assert.*
 
 /**
- * Instrumented test, which will execute on an Android device.
+ * Pruebas instrumentadas que se ejecutan en un dispositivo o emulador Android.
  *
- * See [testing documentation](http://d.android.com/tools/testing).
+ * <p>Permiten acceder a componentes reales de Android, como el contexto de la
+ * aplicación sometida a prueba.</p>
+ *
+ * @see <a href="https://developer.android.com/training/testing/instrumented-tests">Pruebas instrumentadas</a>
  */
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest {
+
+    /** Verifica que el contexto pertenece al paquete de la aplicación. */
     @Test
     fun useAppContext() {
         // Context of the app under test.

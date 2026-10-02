@@ -9,10 +9,41 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.BundleCompat
 import com.example.sendessage.model.Message
 
-class RecieveMessageActivity: AppCompatActivity() {
-    companion object{
+/**
+ * Pantalla que recibe y presenta el mensaje creado en [SendMessageActivity].
+ *
+ * <p>La actividad recupera de su <code>Bundle</code> un obejto <code>Message</code> serializado con la clave
+ * <code>KEY_MESSAGE</code> y muestra la siguiente información:</p>
+ *
+ * <ul>
+ *     <li>Nombre completo del remitente.</li>
+ *     <li>Nombre completo del destinatario.</li>
+ *     <li>Contenido del mensaje.</li>
+ * </ul>
+ *
+ * <p>El botón de la pantalla permite volver a la actividad de envío.</p>
+ *
+ * @author Hugo de Cristobal Gomez
+ * @see SendMessageActivity
+ * @see Message
+ *
+ */
+class RecieveMessageActivity : AppCompatActivity() {
+
+    /** Constantes utilizadas por la actividad. */
+    companion object {
+
+        /** Etiqueta empleada para identificar en Logcat los eventos del ciclo de vida. */
         const val TAG: String = "LogViewMessageActivity"
     }
+
+    /**
+     * Inicializa la interfaz, recupera el mensaje recibido y configura la navegación
+     * de vuelta a [SendMessageActivity].
+     *
+     * @param savedInstanceState estado previamente guardado por Android, o `null` si
+     * la actividad se crea por primera vez.
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_message)
