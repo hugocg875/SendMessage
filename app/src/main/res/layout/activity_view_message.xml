@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/message_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <FrameLayout
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/message_icon_background">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/image_text"
+                android:src="@drawable/smartphone_svgrepo_com"
+                app:tint="@color/message_accent" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/view_title"
+            android:textColor="@color/message_text_primary"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/view_subtitle"
+            android:textColor="@color/message_text_secondary"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/message_card_background"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sender_label"
+                android:textColor="@color/message_text_secondary"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/text_sender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/message_text_primary"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                tools:text="María Cortés Martín" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="18dp"
+                android:background="@color/message_border" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/receiver_label"
+                android:textColor="@color/message_text_secondary"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/text_reciever"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/message_text_primary"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                tools:text="Hugo de Cristóbal Gómez" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="18dp"
+                android:background="@color/message_border" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/message_label"
+                android:textColor="@color/message_text_secondary"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/view2_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="4dp"
+                android:minHeight="72dp"
+                android:textColor="@color/message_text_primary"
+                android:textIsSelectable="true"
+                android:textSize="16sp"
+                tools:text="Este es el mensaje que acabas de enviar." />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn2"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/btn_back"
+            android:textAllCaps="false"
+            android:textColor="@color/message_accent"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/message_surface"
+            app:cornerRadius="16dp"
+            app:strokeColor="@color/message_accent"
+            app:strokeWidth="1dp" />
+
+    </LinearLayout>
+</ScrollView>

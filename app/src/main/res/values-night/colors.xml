@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="message_background">#102124</color>
+    <color name="message_surface">#1B3034</color>
+    <color name="message_input">#233A3E</color>
+    <color name="message_accent">#80D9D0</color>
+    <color name="message_on_accent">#102124</color>
+    <color name="message_icon_background">#28494A</color>
+    <color name="message_text_primary">#ECF7F5</color>
+    <color name="message_text_secondary">#AEC6C6</color>
+    <color name="message_border">#3B5658</color>
+</resources>
