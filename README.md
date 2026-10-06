@@ -13,6 +13,11 @@ El proyecto muestra de forma sencilla cómo navegar entre actividades y cómo tr
 - Botón para regresar a la pantalla de redacción.
 - Registro en Logcat de los principales eventos del ciclo de vida de las actividades.
 
+## Capturas App
+
+![Pantalla de envio](./Images/SendMessage.png)
+![Pantalla de visualizacion](./Images/ViewMessage.png)
+
 ## Funcionamiento
 
 1. `SendMessageActivity` muestra un campo de texto en el que el usuario redacta el mensaje.

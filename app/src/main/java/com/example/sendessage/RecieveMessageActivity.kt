@@ -52,7 +52,7 @@ class RecieveMessageActivity : AppCompatActivity() {
         val sender = findViewById<TextView>(R.id.text_sender)
         val reciever = findViewById<TextView>(R.id.text_reciever)
         val bundle: Bundle = intent.extras!!
-        val message = BundleCompat.getSerializable(
+        val message = BundleCompat.getParcelable(
             bundle,
             "KEY_MESSAGE",
             Message::class.java

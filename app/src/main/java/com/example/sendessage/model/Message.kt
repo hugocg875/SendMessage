@@ -1,6 +1,7 @@
 package com.example.sendessage.model
 
-import java.io.Serializable
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
 
 /**
  * Mensaje intercambiado entre dos personas.
@@ -15,9 +16,11 @@ import java.io.Serializable
  * @property receiver persona que recibe el mensaje.
  * @see Person
  */
+
+@Parcelize
 data class Message(
     val id: Int,
     val content: String,
     val sender: Person,
     val receiver: Person
-) : Serializable
+) : Parcelable
