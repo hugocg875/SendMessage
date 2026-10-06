@@ -15,8 +15,8 @@ El proyecto muestra de forma sencilla cómo navegar entre actividades y cómo tr
 
 ## Capturas App
 
-![Pantalla de envio](./Images/SendMessage.png)
-![Pantalla de visualizacion](./Images/ViewMessage.png)
+<img src="./Images/SendMessage.png" width="200" height="100">
+<img src="./Images/ViewMessage.png" width="200" height="100">
 
 ## Funcionamiento
 
