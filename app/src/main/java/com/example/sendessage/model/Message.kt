@@ -6,9 +6,9 @@ import kotlinx.android.parcel.Parcelize
 /**
  * Mensaje intercambiado entre dos personas.
  *
- * <p>El modelo agrupa el texto y sus participantes en un objeto <code>Serializable</code>,
- * de modo que pueda transferirse entre actividades mediante un
- * <code>Bundle</code>.</p>
+ * <p>El modelo agrupa el texto y sus participantes en un objeto <code>Parcelable</code>
+ * generado con el plugin Kotlin Parcelize, de modo que pueda transferirse entre
+ * actividades dentro de un <code>Bundle</code>.</p>
  *
  * @property id identificador numérico del mensaje.
  * @property content texto escrito por el remitente.
