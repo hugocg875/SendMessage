@@ -19,7 +19,9 @@ El proyecto muestra de forma sencilla cómo navegar entre actividades y cómo tr
 
 ## Capturas App
 
-<img src="./Images/SendMessage.png" width="260" height="578"> | <img src="./Images/ViewMessage.png" width="260" height="578">
+| Pantalla de redacción | Pantalla de recepción |
+| --- | --- |
+| ![Pantalla de redacción del mensaje en SendMessageActivity](Images/SendMessage-preview.png) | ![Detalle del mensaje enviado con remitente y destinatario en RecieveMessageActivity](Images/ViewMessage-preview.png) |
 
 ## Funcionamiento
 
@@ -45,13 +47,15 @@ El flujo de datos es unidireccional y sincrónico: el usuario escribe el texto, 
 
 ## Componentes principales
 
+Las clases de activities viven en `app/src/main/java/com/example/sendessage/` y los modelos en el subpaquete `model/`. En la tabla se muestran las rutas relativas a esa carpeta base.
+
 | Clase | Archivo | Responsabilidad |
 | --- | --- | --- |
-| `SendMessageActivity` | `app/src/main/java/com/example/sendessage/SendMessageActivity.kt` | Pantalla principal: lee el texto, construye `Message` y lo envía a la actividad receptora. |
-| `RecieveMessageActivity` | `app/src/main/java/com/example/sendessage/RecieveMessageActivity.kt` | Recupera el mensaje del `Bundle` y muestra remitente, destinatario y contenido. |
-| `SendMessageAplication` | `app/src/main/java/com/example/sendessage/SendMessageAplication.kt` | Clase `Application` declarada en el manifiesto; Android la crea antes que cualquier actividad. |
-| `Message` | `app/src/main/java/com/example/sendessage/model/Message.kt` | Modelo `@Parcelize` con `id`, `content`, `sender` y `receiver`. |
-| `Person` | `app/src/main/java/com/example/sendessage/model/Person.kt` | Modelo con `dni`, `name` y `surname`; implementa `Serializable`. |
+| `SendMessageActivity` | `SendMessageActivity.kt` | Pantalla principal: lee el texto, construye `Message` y lo envía a la actividad receptora. |
+| `RecieveMessageActivity` | `RecieveMessageActivity.kt` | Recupera el mensaje del `Bundle` y muestra remitente, destinatario y contenido. |
+| `SendMessageAplication` | `SendMessageAplication.kt` | Clase `Application` declarada en el manifiesto; Android la crea antes que cualquier actividad. |
+| `Message` | `model/Message.kt` | Modelo `@Parcelize` con `id`, `content`, `sender` y `receiver`. |
+| `Person` | `model/Person.kt` | Modelo con `dni`, `name` y `surname`; implementa `Serializable`. |
 
 ## Estructura principal
 
